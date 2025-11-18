@@ -1,0 +1,197 @@
+/* --- Base Layout & Colors (Discord Dark Theme) --- */
+
+/* Core Layout */
+.product-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    gap: 40px;
+}
+
+.product-display {
+    width: 50%;
+    padding: 20px;
+    background: rgba(47, 49, 54, 0.6); 
+    border-radius: 18px;
+    box-shadow: 0 0 20px rgba(156, 39, 176, 0.2);
+}
+
+.order-form-area {
+    width: 50%;
+    padding: 40px;
+    background: rgba(32, 34, 37, 0.9); 
+    border-radius: 18px;
+    box-shadow: 0 0 25px rgba(156, 39, 176, 0.4);
+    border: 1px solid rgba(156, 39, 176, 0.5);
+}
+
+.main-product-image {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.product-details h2 {
+    color: var(--nitro-pink); 
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.product-price {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #fff;
+    margin: 10px 0 20px;
+}
+
+.product-description {
+    color: #c9c9c9;
+    margin-bottom: 30px;
+}
+
+.features-list p {
+    color: #a3a3a3;
+    margin: 5px 0;
+}
+.features-list i {
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+/* --- Form Styles --- */
+.vip-form h3 {
+    color: var(--vip-purple);
+    border-bottom: 2px solid var(--vip-purple);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-light, #a3a3a3);
+    font-weight: bold;
+}
+
+/* Input, Textarea, and Select Field Base Style */
+.vip-form input[type="text"], 
+.vip-form input[type="tel"],
+.vip-form input[type="number"],
+.vip-form textarea,
+.vip-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: #2f3136;
+    color: #fff; /* Input text color (closed state) */
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    
+    /* ব্রাউজার ডিফল্ট স্টাইল ওভাররাইড */
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.vip-form input:focus,
+.vip-form textarea:focus,
+.vip-form select:focus {
+    border-color: var(--vip-purple);
+    outline: none;
+    box-shadow: 0 0 5px var(--vip-purple);
+}
+
+/* 🛑 চূড়ান্ত ফিক্স: select option রেন্ডারিং সমস্যা সমাধান */
+/* এটি অপশনগুলোর ব্যাকগ্রাউন্ড ও টেক্সট কালারকে জোর করে সেট করে */
+.vip-form select option {
+    background-color: #2f3136 !important; /* অপশন ব্যাকগ্রাউন্ড ডার্ক (Chrome/Firefox) */
+    color: #ffffff !important;    /* অপশন টেক্সট সাদা (Chrome/Firefox) */
+    
+    /* Webkit-এর জন্য বিশেষ ফিক্স */
+    -webkit-text-fill-color: #ffffff !important; 
+    
+    /* Internet Explorer/Edge-এর জন্য ফিক্স */
+    filter: invert(0); 
+}
+
+/* 🛑 গুরুত্বপূর্ণ ফিক্স: যখন অপশনটি সিলেক্ট করা হয় বা মাউস দিয়ে hover করা হয় */
+/* কিছু ব্রাউজার ডিফল্টভাবে এই ব্যাকগ্রাউন্ডকে সাদা করে দেয়, তাই এটি ফিক্স করা হলো */
+.vip-form select option:hover,
+.vip-form select option:checked {
+    background-color: #5865f2 !important; /* Discord Blue highlight color */
+    color: #ffffff !important;
+}
+
+
+/* --- Summary and Button --- */
+.total-summary {
+    background-color: #292b2f;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-left: 5px solid var(--nitro-pink);
+}
+
+.total-summary p {
+    color: #ccc;
+    line-height: 1.6;
+    overflow: hidden;
+}
+.total-summary p span { 
+    float: right; 
+    color: #ccc; 
+    font-weight: normal;
+}
+
+.final-total {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--nitro-pink);
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+.final-total span { 
+    float: right; 
+    font-weight: bold;
+    color: var(--nitro-pink);
+}
+
+.buy-button {
+    background-color: var(--nitro-pink, #9C27B0);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #A943C3;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .product-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .product-display, .order-form-area {
+        width: 100%;
+    }
+    .order-form-area {
+        padding: 30px;
+    }
+}

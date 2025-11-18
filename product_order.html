@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Tee House - Product Order</title>
+    <link rel="stylesheet" href="shop_vip_style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="product_page.css">
+</head>
+<body>
+
+    <header class="shop-header">
+        <h1>⭐ Star Tee House VIP Shop</h1>
+    </header>
+
+    <main class="product-container">
+        <section class="product-display">
+            <div class="product-image-area">
+                <img src="https://via.placeholder.com/600x600?text=Premium+Star+T-Shirt" alt="Premium Star T-Shirt" class="main-product-image">
+            </div>
+            
+            <div class="product-details">
+                <h2>Premium Star Tee - Galaxy Series</h2>
+                <p class="product-price">৳ 799 BDT</p>
+                <p class="product-description">Exclusive high-quality cotton T-shirt with neon star embroidery. Limited Edition.</p>
+                
+                <div class="features-list">
+                    <p><i class="fas fa-check-circle"></i> High-Quality Fabric</p>
+                    <p><i class="fas fa-check-circle"></i> Neon Glow Print</p>
+                    <p><i class="fas fa-check-circle"></i> Available in 4 Colors</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="order-form-area">
+            <h3>Place Your Order</h3>
+            <form id="webOrderForm" class="vip-form">
+                
+                <div class="form-group">
+                    <label for="name">👤 Your Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">📞 Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">🏠 Full Delivery Address</label>
+                    <textarea id="address" name="address" rows="3" placeholder="Road, House No., City" required></textarea>
+                </div>
+                
+                <div class="form-group dropdown-group">
+                    <label for="area">🏙️ Delivery Area</label>
+                    <select id="area" name="area" required>
+                        <option value="">-- Select Area --</option>
+                        <option value="Dhaka">Dhaka (Fee: ৳60)</option>
+                        <option value="Outside Dhaka">Outside Dhaka (Fee: ৳120)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="size">📏 Size / Option</label>
+                    <select id="size" name="size" required>
+                        <option value="M">Medium (M)</option>
+                        <option value="L">Large (L)</option>
+                        <option value="XL">Extra Large (XL)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="quantity">🔢 Quantity</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" required>
+                </div>
+
+                <div class="total-summary">
+                    <p>Product Subtotal: <span id="subtotal">৳ 799</span></p>
+                    <p>Delivery Fee: <span id="delivery-fee">৳ 0</span></p>
+                    <p class="final-total">TOTAL PAYABLE: <span id="final-total">৳ 799</span></p>
+                </div>
+                
+                <button type="submit" class="buy-button">🛒 Place Order</button>
+
+                <p id="response-message" class="message"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="shop-footer">
+        <p>&copy; 2025 Star Tee House. Order via Web or Discord Bot.</p>
+    </footer>
+
+    <script src="product_script.js"></script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
